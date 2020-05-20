@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pixarinabox.ParabolicArcController">
+   <children>
+      <SplitPane dividerPositions="0.24268104776579352" prefHeight="900.0" prefWidth="1300.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <CheckBox fx:id="lineVisibility" layoutX="73.0" layoutY="74.0" mnemonicParsing="false" onAction="#setLineVisibility" text="Visible Lines">
+                     <font>
+                        <Font name="Bell MT Bold" size="22.0" />
+                     </font>
+                  </CheckBox>
+               </children></AnchorPane>
+          <AnchorPane fx:id="CA" minHeight="0.0" minWidth="0.0" onMouseClicked="#PlacedPoint" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Canvas height="900.0" layoutY="-1.0" width="980.0" />
+                  <Label fx:id="status" layoutX="14.0" layoutY="14.0" text="Place Three Points">
+                     <font>
+                        <Font size="28.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

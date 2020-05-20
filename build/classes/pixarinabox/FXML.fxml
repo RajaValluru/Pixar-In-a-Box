@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pixarinabox.ParabolicArcController">
+   <children>
+      <SplitPane dividerPositions="0.21263482280431434" prefHeight="900.0" prefWidth="1300.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <CheckBox fx:id="lineVisibility" layoutX="14.0" layoutY="76.0" mnemonicParsing="false" onAction="#setLineVisibility" text="Visible Help Lines">
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font>
+                  </CheckBox>
+                  <Button layoutY="872.0" mnemonicParsing="false" onAction="#back" text="&lt;-Back" />
+                  <Label layoutX="34.0" layoutY="146.0" text="Change Line Color">
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="lineColor" layoutX="34.0" layoutY="176.0" onMouseDragged="#lineColorSlider" onMouseMoved="#lineColorSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="31.0" prefWidth="194.0" />
+                  <Label layoutX="14.0" layoutY="235.0" text="Change Help Line Color">
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="helpLineColor" layoutX="34.0" layoutY="265.0" onMouseDragged="#helpLineColorSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="31.0" prefWidth="194.0" />
+                  <Slider fx:id="lineWidth" layoutX="34.0" layoutY="367.0" onMouseDragged="#lineWidthSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="31.0" prefWidth="194.0" />
+                  <Slider fx:id="helpLineWidth" layoutX="42.0" layoutY="457.0" onMouseDragged="#helpLineWidthSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="31.0" prefWidth="194.0" />
+                  <Label layoutX="37.0" layoutY="337.0" text="Change Line Width">
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="427.0" text="Change Help Line Width">
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+          <AnchorPane fx:id="CA" minHeight="0.0" minWidth="0.0" onMouseClicked="#PlacedPoint" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Canvas height="900.0" layoutY="-1.0" width="980.0" />
+                  <Label fx:id="status" layoutX="14.0" layoutY="14.0" text="Place Three Points">
+                     <font>
+                        <Font size="28.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

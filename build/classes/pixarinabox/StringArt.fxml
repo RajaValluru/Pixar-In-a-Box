@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pixarinabox.StringArtController">
+   <children>
+      <SplitPane dividerPositions="0.20537124802527645" layoutX="14.0" layoutY="14.0" prefHeight="880.0" prefWidth="1268.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Slider fx:id="pointSlider" layoutX="18.0" layoutY="61.0" onMouseDragged="#slided" onMouseMoved="#slided" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="23.0" prefWidth="173.0" />
+                  <Label layoutX="27.0" layoutY="27.0" text="Number of Points">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numOfPoints" layoutX="211.0" layoutY="53.0" text="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="852.0" mnemonicParsing="false" onAction="#back" text="&lt;-Back" />
+                  <Slider fx:id="lineColor" layoutX="18.0" layoutY="151.0" onMouseDragged="#lineColorSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="26.0" prefWidth="173.0" />
+                  <Label layoutX="18.0" layoutY="125.0" text="Change Line Color">
+                     <font>
+                        <Font name="Bodoni MT" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="225.0" text="Change Help Line Color">
+                     <font>
+                        <Font name="Bodoni MT" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="326.0" text="Change Line Width">
+                     <font>
+                        <Font name="Bodoni MT" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="413.0" text="Change Help Line Width">
+                     <font>
+                        <Font name="Bodoni MT" size="21.0" />
+                     </font>
+                  </Label>
+                  <Slider fx:id="helpLineColor" layoutX="18.0" layoutY="251.0" onMouseDragged="#helpLineColorSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="26.0" prefWidth="173.0" />
+                  <Slider fx:id="lineWidth" layoutX="18.0" layoutY="352.0" onMouseDragged="#lineWidthSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="26.0" prefWidth="173.0" />
+                  <Slider fx:id="helpLineWidth" layoutX="17.0" layoutY="439.0" onMouseDragged="#helpLineWidthSlider" onMousePressed="#sliderPressed" onMouseReleased="#sliderReleased" prefHeight="26.0" prefWidth="173.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="CA" minHeight="0.0" minWidth="0.0" onMouseClicked="#PlacedPoint" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Canvas height="819.0" layoutX="34.0" layoutY="48.0" width="957.0" />
+                  <Label fx:id="M" layoutX="14.0" layoutY="14.0" text="Place Three Points to Get Started">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
